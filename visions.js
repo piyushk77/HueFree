@@ -39,7 +39,7 @@ const visions = Object.freeze({
         useMap : false,
         colorMap : null
     }),
-    deuteranomly: Object.freeze({
+    deuteranomaly: Object.freeze({
         description : "The deuteranomalous person is considered “green weak”. The person is poor at discriminating small differences in hues in the red, orange, yellow, green region of the spectrum.\nSource: http://www.colorvisiontesting.com/color2.htm",
         transMatrix : [
             [0.547494, 0.607765, -0.155259],
