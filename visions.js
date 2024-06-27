@@ -7,7 +7,7 @@ const visions = Object.freeze({
             [-0.004517144, 0.004517144, 1]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     deuteranopia: Object.freeze({
         description : "Blindness to green is known as deuteranopia, wherein green cones are lacking and blue and red cones are functional.\nSource: https://www.britannica.com/science/color-blindness",
@@ -17,7 +17,7 @@ const visions = Object.freeze({
             [-0.02785538, 0.02785538, 1]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     tritanopia: Object.freeze({
         description : "Tritanopia is a condition where a person cannot distinguish between blue and yellow colors. Impaired blue and yellow vision is the main symptom that is associated with this condition.\nSource: https://colormax.org/tritanopia",
@@ -27,7 +27,7 @@ const visions = Object.freeze({
             [0, 0.8739093, 0.1260907]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     protanomaly: Object.freeze({
         description : "Protanomaly is referred to as “red-weakness”, an apt description of this form of color deficiency. Red, orange, yellow, and yellow-green appear somewhat shifted in hue (“hue” is just another word for “color”) towards green, and all appear paler than they do to the normal observer.\nSource: http://www.colorvisiontesting.com/color2.htm",
@@ -37,7 +37,7 @@ const visions = Object.freeze({
             [-0.007494, -0.016807, 1.024301]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     deuteranomaly: Object.freeze({
         description : "The deuteranomalous person is considered “green weak”. The person is poor at discriminating small differences in hues in the red, orange, yellow, green region of the spectrum.\nSource: http://www.colorvisiontesting.com/color2.htm",
@@ -47,7 +47,7 @@ const visions = Object.freeze({
             [-0.010410, 0.027275, 0.983136]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     tritanomaly: Object.freeze({
         description : "Tritanomaly is an alleviated form of blue-yellow color blindness. It affects blue-green and yellow-red/pink color discrimination. Reds are easily distinguished and not altered by tritanomaly.\nSource: https://colorblindness-emulator.netlify.app/categories/tritanomaly",
@@ -57,7 +57,7 @@ const visions = Object.freeze({
             [0.006379, 0.248708, 0.744913]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     }),
     achromatopsia: Object.freeze({
         description : "Achromatopsia, also known as Rod monochromacy, is a medical syndrome that exhibits symptoms relating to five conditions, most notably monochromacy.\nSource: https://en.wikipedia.org/wiki/Achromatopsia",
@@ -67,7 +67,7 @@ const visions = Object.freeze({
             [0.2126, 0.7152, 0.0722]
         ],
         useMap : false,
-        colorMap : null
+        mapColor : null
     })
 });
 
