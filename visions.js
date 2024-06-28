@@ -8,7 +8,7 @@ const visions = Object.freeze({
         ],
         useMap: false,
         mapColor: null
-    }),    
+    }),
     protanopia: Object.freeze({
         description: "Blindness to red is known as protanopia, a state in which the red cones are absent, leaving only the cones that absorb blue and green light.\nSource: https://www.britannica.com/science/color-blindness",
         transMatrix: [
@@ -75,6 +75,101 @@ const visions = Object.freeze({
             [0.2126, 0.7152, 0.0722],
             [0.2126, 0.7152, 0.0722],
             [0.2126, 0.7152, 0.0722]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    grayscale: Object.freeze({
+        description: "Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray. The contrast ranges from black at the weakest intensity to white at the strongest.\nSource: https://en.wikipedia.org/wiki/Grayscale",
+        transMatrix: [
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    sepia: Object.freeze({
+        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color)",
+        transMatrix: [
+            [0.393, 0.769, 0.189],
+            [0.349, 0.686, 0.168],
+            [0.272, 0.534, 0.131]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    sepiaClamp: Object.freeze({
+        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color)\nNote: The color transformation for sepiaClamp clamps values to stay within 0-255 range but the process is iterative and may led to delayed loading, use \"sepia\" for non clamped version.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            let r = sRGB[0], g = sRGB[1], b = sRGB[2];
+            sRGB[0] = (r * 0.393) + (g * 0.769) + (b * 0.189);
+            sRGB[1] = (r * 0.349) + (g * 0.686) + (b * 0.168);
+            sRGB[2] = (r * 0.272) + (g * 0.534) + (b * 0.131);
+            // Clamp values to stay within 0-255 range
+            sRGB = sRGB.map(val => Math.max(0, Math.min(255, val)));
+            return sRGB;
+        }
+    }),
+    desaturate: Object.freeze({
+        description: "Color desaturation refers to the process of reducing the intensity or vibrancy of colors in an image or artwork. It's commonly used in photography and graphic design to achieve a more muted, subdued, or grayscale appearance.\nSource of algorithm: https://stackoverflow.com/questions/13328029/how-to-desaturate-a-color",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            let fact = 0.5;     // Desaturate by 50%
+            let weight = 0.3 * sRGB[0] + 0.6 * sRGB[1] + 0.1 * sRGB[2];
+            sRGB[0] = sRGB[0] + (weight - sRGB[0]) * fact;
+            sRGB[1] = sRGB[1] + (weight - sRGB[1]) * fact;
+            sRGB[2] = sRGB[2] + (weight - sRGB[2]) * fact;
+            return sRGB;
+        }
+    }),
+    invert: Object.freeze({
+        description: " Inverting RGB colors involves converting each channel's color value to its complement. For example, a pixel with RGB values (R, G, B) would be inverted to (255 - R, 255 - G, 255 - B), where 255 is the maximum intensity value in an 8-bit color channel. This process produces an image where each color is replaced by its opposite on the color wheel. For instance, red becomes cyan, green becomes magenta, and blue becomes yellow.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[0] = 255 - sRGB[0];
+            sRGB[1] = 255 - sRGB[1];
+            sRGB[2] = 255 - sRGB[2];
+            return sRGB;
+        }
+    }),
+    invertRed: Object.freeze({
+        description: "Inverting the red color involves reversing the intensity values of the red channel in an image. Each pixel's red intensity value is subtracted from the maximum intensity value (usually 255 in an 8-bit system), resulting in a color shift where red tones become cyan or blue-green.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[0] = 255 - sRGB[0];
+            return sRGB;
+        }
+    }),
+    invertGreen: Object.freeze({
+        description: "Inverting the green color means reversing the intensity values of the green channel in an image. Each pixel's green intensity value is subtracted from the maximum intensity value (255), causing green tones to shift towards magenta or purple.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[1] = 255 - sRGB[1];
+            return sRGB;
+        }
+    }),
+    invertBlue: Object.freeze({
+        description: "Inverting the blue color entails reversing the intensity values of the blue channel in an image. Each pixel's blue intensity value is subtracted from the maximum intensity value (255), leading to a change where blue tones transform into yellow or orange-yellow hues.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[2] = 255 - sRGB[2];
+            return sRGB;
+        }
+    }),
+    channelShift: Object.freeze({
+        description: "\"Channel shift\" refers to a technique used in image processing where the intensity values of color channels (such as red, green, and blue in RGB images) are altered to create visual effects or adjust color balance. It involves shifting the values of one or more channels relative to others, often to enhance or modify specific colors within an image without changing its overall composition.",
+        transMatrix: [
+            [0, 1, 0],
+            [0, 0, 1],
+            [1, 0, 0]
         ],
         useMap: false,
         mapColor: null
