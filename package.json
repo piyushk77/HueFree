@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "docs": "jsdoc --readme README.md -c jsdoc.json"
+    "docs": "jsdoc --readme README.md -c jsdoc.json --verbose"
   },
   "repository": {
     "type": "git",
