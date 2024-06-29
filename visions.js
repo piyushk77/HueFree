@@ -1,6 +1,33 @@
+/**
+ * Object containing definition for various color vision properties and its transformation.
+ *
+ * Each color vision is represented by an object containing a description, transformation matrix for color conversion, and additional properties.
+ *
+ * @typedef {Object} ColorVision
+ * @property {string} description - Description of the color vision type.
+ * @property {number[][]} transMatrix - Transformation matrix for color conversion (Used to convert original sRGB to vision based sRGB).
+ * @property {boolean} useMap - Indicates if a color mapping function is used.
+ * @property {function} mapColor - Function to map colors based on the vision type. User can provide custom functions for color conversions.
+ */
+
+/**
+ * This object defines several types of color vision simulations.
+ * 
+ * Definitions for different color vision types.
+ * 
+ * Each vision type is represented as a frozen object containing:
+ * 
+ * - Description: Explanation of the vision type and its effects.
+ * - TransMatrix: Transformation matrix for color space conversion.
+ * - UseMap: Indicates if a color mapping function is applied.
+ * - MapColor: Function to transform colors based on the vision type.
+ *
+ * @constant {Object.<string, ColorVision>}
+ */
+
 const visions = Object.freeze({
     normal: Object.freeze({
-        description: "Normal colour vision uses all three types of cone cells which are functioning correctly. Another term for normal colour vision is trichromacy. People with normal colour vision are known as trichromats.\nSource: https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness",
+        description: "Normal color vision uses all three types of cone cells which are functioning correctly. Another term for normal color vision is trichromacy. People with normal color vision are known as trichromats.\nSource: https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness",
         transMatrix: [
             [1, 0, 0],
             [0, 1, 0],
@@ -100,7 +127,7 @@ const visions = Object.freeze({
         mapColor: null
     }),
     sepiaClamp: Object.freeze({
-        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color)\nNote: The color transformation for sepiaClamp clamps values to stay within 0-255 range but the process is iterative and may led to delayed loading, use \"sepia\" for non clamped version.",
+        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color) \nNote: The color transformation for sepiaClamp clamps values to stay within 0-255 range but the process is iterative and may led to delayed loading, use \"sepia\" for non clamped version.",
         transMatrix: null,
         useMap: true,
         mapColor: function (sRGB) {
@@ -114,7 +141,7 @@ const visions = Object.freeze({
         }
     }),
     desaturate: Object.freeze({
-        description: "Color desaturation refers to the process of reducing the intensity or vibrancy of colors in an image or artwork. It's commonly used in photography and graphic design to achieve a more muted, subdued, or grayscale appearance.\nSource of algorithm: https://stackoverflow.com/questions/13328029/how-to-desaturate-a-color",
+        description: "Color desaturation refers to the process of reducing the intensity or vibrancy of colors in an image or artwork. It's commonly used in photography and graphic design to achieve a more muted, subdued, or grayscale appearance.\nSource of algorithm: https://stackoverflow.com/questions/13328029/how-to-desaturate-a-color \nNote: By default the transformation desaturate by 50%.",
         transMatrix: null,
         useMap: true,
         mapColor: function (sRGB) {
@@ -166,15 +193,16 @@ const visions = Object.freeze({
     }),
     channelShift: Object.freeze({
         description: "\"Channel shift\" refers to a technique used in image processing where the intensity values of color channels (such as red, green, and blue in RGB images) are altered to create visual effects or adjust color balance. It involves shifting the values of one or more channels relative to others, often to enhance or modify specific colors within an image without changing its overall composition.",
-        transMatrix: [
-            [0, 1, 0],
-            [0, 0, 1],
-            [1, 0, 0]
-        ],
-        useMap: false,
-        mapColor: null
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (rgb){
+            let temp = rgb[0];
+            rgb[0] = rgb[1];
+            rgb[1] = rgb[2];
+            rgb[2] = temp;
+            return rgb;
+        }
     })
 });
 
 export default visions;
-
