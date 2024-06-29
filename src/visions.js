@@ -1,0 +1,228 @@
+/*
+HueFree - Color transformations for color blind visions and more.
+Copyright (C) 2023, 2024  Piyush Katyal
+
+This file is part of HueFree Library.
+
+HueFree is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+HueFree is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with HueFree.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/**
+ * Object containing definition for various color vision properties and its transformation.
+ *
+ * Each color vision is represented by an object containing a description, transformation matrix for color conversion, and additional properties.
+ *
+ * @typedef {Object} ColorVision
+ * @property {string} description - Description of the color vision type.
+ * @property {number[][]} transMatrix - Transformation matrix for color conversion (Used to convert original sRGB to vision based sRGB).
+ * @property {boolean} useMap - Indicates if a color mapping function is used.
+ * @property {function} mapColor - Function to map colors based on the vision type. User can provide custom functions for color conversions.
+ */
+
+/**
+ * This object defines several types of color vision simulations.
+ * 
+ * Definitions for different color vision types.
+ * 
+ * Each vision type is represented as a frozen object containing:
+ * 
+ * - Description: Explanation of the vision type and its effects.
+ * - TransMatrix: Transformation matrix for color space conversion.
+ * - UseMap: Indicates if a color mapping function is applied.
+ * - MapColor: Function to transform colors based on the vision type.
+ *
+ * @constant {Object.<string, ColorVision>}
+ */
+
+const visions = Object.freeze({
+    normal: Object.freeze({
+        description: "Normal color vision uses all three types of cone cells which are functioning correctly. Another term for normal color vision is trichromacy. People with normal color vision are known as trichromats.\nSource: https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness",
+        transMatrix: [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    protanopia: Object.freeze({
+        description: "Blindness to red is known as protanopia, a state in which the red cones are absent, leaving only the cones that absorb blue and green light.\nSource: https://www.britannica.com/science/color-blindness",
+        transMatrix: [
+            [0.170556992, 0.829443014, 0],
+            [0.170556991, 0.829443008, 0],
+            [-0.004517144, 0.004517144, 1]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    deuteranopia: Object.freeze({
+        description: "Blindness to green is known as deuteranopia, wherein green cones are lacking and blue and red cones are functional.\nSource: https://www.britannica.com/science/color-blindness",
+        transMatrix: [
+            [0.33066007, 0.66933993, 0],
+            [0.33066007, 0.66933993, 0],
+            [-0.02785538, 0.02785538, 1]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    tritanopia: Object.freeze({
+        description: "Tritanopia is a condition where a person cannot distinguish between blue and yellow colors. Impaired blue and yellow vision is the main symptom that is associated with this condition.\nSource: https://colormax.org/tritanopia",
+        transMatrix: [
+            [1, 0.1273989, -0.1273989],
+            [0, 0.8739093, 0.1260907],
+            [0, 0.8739093, 0.1260907]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    protanomaly: Object.freeze({
+        description: "Protanomaly is referred to as “red-weakness”, an apt description of this form of color deficiency. Red, orange, yellow, and yellow-green appear somewhat shifted in hue (“hue” is just another word for “color”) towards green, and all appear paler than they do to the normal observer.\nSource: http://www.colorvisiontesting.com/color2.htm",
+        transMatrix: [
+            [0.458064, 0.679578, -0.137642],
+            [0.092785, 0.846313, 0.060902],
+            [-0.007494, -0.016807, 1.024301]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    deuteranomaly: Object.freeze({
+        description: "The deuteranomalous person is considered “green weak”. The person is poor at discriminating small differences in hues in the red, orange, yellow, green region of the spectrum.\nSource: http://www.colorvisiontesting.com/color2.htm",
+        transMatrix: [
+            [0.547494, 0.607765, -0.155259],
+            [0.181692, 0.781742, 0.036566],
+            [-0.010410, 0.027275, 0.983136]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    tritanomaly: Object.freeze({
+        description: "Tritanomaly is an alleviated form of blue-yellow color blindness. It affects blue-green and yellow-red/pink color discrimination. Reds are easily distinguished and not altered by tritanomaly.\nSource: https://colorblindness-emulator.netlify.app/categories/tritanomaly",
+        transMatrix: [
+            [1.017277, 0.027029, -0.044306],
+            [-0.006113, 0.958479, 0.047634],
+            [0.006379, 0.248708, 0.744913]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    achromatopsia: Object.freeze({
+        description: "Achromatopsia, also known as Rod monochromacy, is a medical syndrome that exhibits symptoms relating to five conditions, most notably monochromacy.\nSource: https://en.wikipedia.org/wiki/Achromatopsia",
+        transMatrix: [
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    grayscale: Object.freeze({
+        description: "Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray. The contrast ranges from black at the weakest intensity to white at the strongest.\nSource: https://en.wikipedia.org/wiki/Grayscale",
+        transMatrix: [
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722],
+            [0.2126, 0.7152, 0.0722]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    sepia: Object.freeze({
+        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color)",
+        transMatrix: [
+            [0.393, 0.769, 0.189],
+            [0.349, 0.686, 0.168],
+            [0.272, 0.534, 0.131]
+        ],
+        useMap: false,
+        mapColor: null
+    }),
+    sepiaClamp: Object.freeze({
+        description: "Sepia is a reddish-brown color, named after the rich brown pigment derived from the ink sac of the common cuttlefish Sepia. The word sepia is the Latinized form of the Greek σηπία, sēpía, cuttlefish.\nSource: https://en.wikipedia.org/wiki/Sepia_(color) \nNote: The color transformation for sepiaClamp clamps values to stay within 0-255 range but the process is iterative and may led to delayed loading, use \"sepia\" for non clamped version.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            let r = sRGB[0], g = sRGB[1], b = sRGB[2];
+            sRGB[0] = (r * 0.393) + (g * 0.769) + (b * 0.189);
+            sRGB[1] = (r * 0.349) + (g * 0.686) + (b * 0.168);
+            sRGB[2] = (r * 0.272) + (g * 0.534) + (b * 0.131);
+            // Clamp values to stay within 0-255 range
+            sRGB = sRGB.map(val => Math.max(0, Math.min(255, val)));
+            return sRGB;
+        }
+    }),
+    desaturate: Object.freeze({
+        description: "Color desaturation refers to the process of reducing the intensity or vibrancy of colors in an image or artwork. It's commonly used in photography and graphic design to achieve a more muted, subdued, or grayscale appearance.\nSource of algorithm: https://stackoverflow.com/questions/13328029/how-to-desaturate-a-color \nNote: By default the transformation desaturate by 50%.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            let fact = 0.5;     // Desaturate by 50%
+            let weight = 0.3 * sRGB[0] + 0.6 * sRGB[1] + 0.1 * sRGB[2];
+            sRGB[0] = sRGB[0] + (weight - sRGB[0]) * fact;
+            sRGB[1] = sRGB[1] + (weight - sRGB[1]) * fact;
+            sRGB[2] = sRGB[2] + (weight - sRGB[2]) * fact;
+            return sRGB;
+        }
+    }),
+    invert: Object.freeze({
+        description: " Inverting RGB colors involves converting each channel's color value to its complement. For example, a pixel with RGB values (R, G, B) would be inverted to (255 - R, 255 - G, 255 - B), where 255 is the maximum intensity value in an 8-bit color channel. This process produces an image where each color is replaced by its opposite on the color wheel. For instance, red becomes cyan, green becomes magenta, and blue becomes yellow.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[0] = 255 - sRGB[0];
+            sRGB[1] = 255 - sRGB[1];
+            sRGB[2] = 255 - sRGB[2];
+            return sRGB;
+        }
+    }),
+    invertRed: Object.freeze({
+        description: "Inverting the red color involves reversing the intensity values of the red channel in an image. Each pixel's red intensity value is subtracted from the maximum intensity value (usually 255 in an 8-bit system), resulting in a color shift where red tones become cyan or blue-green.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[0] = 255 - sRGB[0];
+            return sRGB;
+        }
+    }),
+    invertGreen: Object.freeze({
+        description: "Inverting the green color means reversing the intensity values of the green channel in an image. Each pixel's green intensity value is subtracted from the maximum intensity value (255), causing green tones to shift towards magenta or purple.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[1] = 255 - sRGB[1];
+            return sRGB;
+        }
+    }),
+    invertBlue: Object.freeze({
+        description: "Inverting the blue color entails reversing the intensity values of the blue channel in an image. Each pixel's blue intensity value is subtracted from the maximum intensity value (255), leading to a change where blue tones transform into yellow or orange-yellow hues.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (sRGB) {
+            sRGB[2] = 255 - sRGB[2];
+            return sRGB;
+        }
+    }),
+    channelShift: Object.freeze({
+        description: "\"Channel shift\" refers to a technique used in image processing where the intensity values of color channels (such as red, green, and blue in RGB images) are altered to create visual effects or adjust color balance. It involves shifting the values of one or more channels relative to others, often to enhance or modify specific colors within an image without changing its overall composition.",
+        transMatrix: null,
+        useMap: true,
+        mapColor: function (rgb){
+            let temp = rgb[0];
+            rgb[0] = rgb[1];
+            rgb[1] = rgb[2];
+            rgb[2] = temp;
+            return rgb;
+        }
+    })
+});
+
+module.exports = visions;

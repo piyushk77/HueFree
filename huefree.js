@@ -1,71 +1,51 @@
-function changeToAccessible(object) {
+/*
+HueFree - Color transformations for color blind visions and more.
+Copyright (C) 2023, 2024  Piyush Katyal
 
-    const elements = object.querySelectorAll('*');
+This file is part of HueFree Library.
 
-    for (let i = 0; i < elements.length; i++) {
-        
-        const computedStyle = window.getComputedStyle(elements[i]);
+HueFree is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-        const backgroundColor = computedStyle.getPropertyValue('background-color');
-        const color = computedStyle.getPropertyValue('color');
-        const borderColor = computedStyle.getPropertyValue('border-color');
-        const outlineColor = computedStyle.getPropertyValue('outline-color');
-        const fill = computedStyle.getPropertyValue('fill');
-        const stroke = computedStyle.getPropertyValue('stroke');
-        const caretColor = computedStyle.getPropertyValue('caret-color');
-        const columnRuleColor = computedStyle.getPropertyValue('column-rule-color');
-        const textDecorationColor = computedStyle.getPropertyValue('text-decoration-color');
-        const textEmphasisColor = computedStyle.getPropertyValue('text-emphasis-color');
+HueFree is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-        elements[i].style.backgroundColor = accessColor(backgroundColor);
-        elements[i].style.color = accessColor(color);
-        elements[i].style.borderColor = accessColor(borderColor);
-        elements[i].style.outlineColor = accessColor(outlineColor);
-        elements[i].style.fill = accessColor(fill);
-        elements[i].style.stroke = accessColor(stroke);
-        elements[i].style.caretColor = accessColor(caretColor);
-        elements[i].style.columnRuleColor = accessColor(columnRuleColor);
-        elements[i].style.textDecorationColor = accessColor(textDecorationColor);
-        elements[i].style.textEmphasisColor = accessColor(textEmphasisColor);
-    }
-}
+You should have received a copy of the GNU General Public License
+along with HueFree.  If not, see <https://www.gnu.org/licenses/>.
+*/
 
-function accessColor(userInput) {
+// Import functions from colorMethods.js
+const {
+    stringToRgb,
+    rgbToString,
+    linearize,
+    deLinearize,
+    colorTransform
+} = require('./src/colorMethods');
 
-    if (userInput.startsWith("rgba") || userInput.startsWith("none")) {
-        return userInput;
-    }
+// Import functions from visionMethods.js
+const {
+    getVisions,
+    getVisionDetail,
+    changeVision,
+    changeVisionRecursive,
+    getCustomVisions
+} = require('./src/visionMethods');
 
-    const colors = [
-        { name: "black", rgb: [0, 0, 0] },
-        { name: "orange", rgb: [230, 159, 0] },
-        { name: "sky blue", rgb: [86, 180, 233] },
-        { name: "bluish green", rgb: [0, 158, 115] },
-        { name: "yellow", rgb: [240, 228, 66] },
-        { name: "blue", rgb: [0, 114, 178] },
-        { name: "vermillon", rgb: [213, 94, 0] },
-        { name: "reddish purple", rgb: [204, 121, 167] },
-        { name: "white", rgb: [255, 255, 255] }
-    ];
-
-    const rgbRegex = /rgb\((\d+),\s*(\d+),\s*(\d+)\)/;
-    const [, red, green, blue] = rgbRegex.exec(userInput);
-
-    const userColor = [parseInt(red), parseInt(green), parseInt(blue)];
-
-    let minDistance = Infinity;
-    let closestRGB = [];
-    for (const color of colors) {
-        const [r, g, b] = color.rgb;
-        const distance = Math.sqrt(
-            Math.pow(userColor[0] - r, 2) +
-            Math.pow(userColor[1] - g, 2) +
-            Math.pow(userColor[2] - b, 2)
-        );
-        if (distance < minDistance) {
-            minDistance = distance;
-            closestRGB = color.rgb;
-        }
-    }
-    return "rgb(" + closestRGB[0] + ", " + closestRGB[1] + ", " + closestRGB[2] + ")";
-}
+// Export all imported functions
+module.exports = {
+    stringToRgb,
+    rgbToString,
+    linearize,
+    deLinearize,
+    colorTransform,
+    getVisions,
+    getVisionDetail,
+    changeVision,
+    changeVisionRecursive,
+    getCustomVisions
+};

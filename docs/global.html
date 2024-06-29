@@ -1,0 +1,2758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HueFree - Library for Color Vision Simulations: Global</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-custom.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+
+<header class="layout-header">
+  
+  <h1>
+    <a href="./index.html">
+      HueFree - Library for Color Vision Simulations
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#ColorVision">ColorVision</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#applyFilter">applyFilter</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#changeVision">changeVision</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#changeVisionRecursive">changeVisionRecursive</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#colorTransform">colorTransform</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#deLinearize">deLinearize</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#getCustomVisions">getCustomVisions</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#getVisionDetail">getVisionDetail</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#getVisions">getVisions</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#linearize">linearize</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#processPixels">processPixels</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#rgbToString">rgbToString</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="global.html#stringToRgb">stringToRgb</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#visions">visions</a></span></li>
+  </nav>
+</header>
+
+
+<main class="layout-main ">
+  <div class="container">
+    <p class="page-kind"></p>
+    <h1 class="page-title">Global</h1>
+    
+
+
+
+
+<section>
+
+
+<header class="not-class">
+
+
+    
+        
+        <!-- <h2></h2> -->
+
+        
+
+        
+
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+
+
+
+    
+        
+
+        
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+        <h3 class="subtitle">Members</h3>
+
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="visions">visions<span class="type-signature">Object.&lt;string, <a href="global.html#ColorVision">ColorVision</a>></span></h4>
+
+
+
+
+<div class="description">
+    <p>This object defines several types of color vision simulations.</p>
+<p>Definitions for different color vision types.</p>
+<p>Each vision type is represented as a frozen object containing:</p>
+<ul>
+<li>Description: Explanation of the vision type and its effects.</li>
+<li>TransMatrix: Transformation matrix for color space conversion.</li>
+<li>UseMap: Indicates if a color mapping function is applied.</li>
+<li>MapColor: Function to transform colors based on the vision type.</li>
+</ul>
+</div>
+
+
+
+    <h4>Type</h4>
+    <ul>
+        <li>
+            
+
+
+    <span class="param-type">
+        <code>Object.&lt;string, <a href="global.html#ColorVision">ColorVision</a>></code>
+    </span>
+    
+
+        </li>
+    </ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visions.js.html">visions.js</a><a href="visions.js.html#source.48">, line 48</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+    
+
+    
+        <h3 class="subtitle">Methods</h3>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="applyFilter">applyFilter<span class="signature">(target, visionType, obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {HTMLImageElement}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Applies an SVG filter to an image element to simulate color vision deficiency. (Currently not available to public)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">target</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>HTMLImageElement</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The image element to apply the filter to.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">visionType</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The type of color vision simulation to apply.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>HTMLImageElement</code>
+            
+            
+                <ul>
+<li>The image element with the SVG filter applied.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.220">, line 220</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="changeVision">changeVision<span class="signature">(target, visionType, obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {string|Element|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Applies color vision simulation transformation to a target element or CSS color string.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">target</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>Element</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The CSS color string or DOM element to apply the color vision simulation.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">visionType</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The type of color vision simulation to apply.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>string</code>
+            
+                <code>Element</code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>The transformed CSS color string, DOM element with applied styles,
+or undefined if the target cannot be processed.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.58">, line 58</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="changeVisionRecursive">changeVisionRecursive<span class="signature">(target, visionType, obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Element|string|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Recursively applies color vision simulation transformation to all child elements and CSS color strings of a target element.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">target</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>Element</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The CSS color string or DOM element to apply the color vision simulation recursively.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">visionType</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The type of color vision simulation to apply.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Element</code>
+            
+                <code>string</code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>The transformed DOM element with applied styles, the transformed CSS color string,
+or undefined if the target cannot be processed.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.130">, line 130</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="colorTransform">colorTransform<span class="signature">(transMat, rgbMat)</span><span class="return-type-signature"> &rarr; {Array.&lt;number>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Applies a color transformation matrix to an RGB color array.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">transMat</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Array.&lt;Array.&lt;number>></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The transformation matrix, a 3x3 array of numbers.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">rgbMat</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Array.&lt;number></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>An array containing the RGB components [red, green, blue, alpha].</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;number></code>
+            
+            
+                <p>An array containing the transformed RGB components.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="colorMethods.js.html">colorMethods.js</a><a href="colorMethods.js.html#source.147">, line 147</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="deLinearize">deLinearize<span class="signature">(color)</span><span class="return-type-signature"> &rarr; {Array.&lt;number>|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>De-linearizes an RGB color array from linear to gamma-corrected sRGB values.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">color</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>Array.&lt;number></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The CSS color string or an array containing the linearized RGB components [red, green, blue, alpha].</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;number></code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>An array containing the de-linearized sRGB components [red, green, blue, alpha],
+or undefined if the input is invalid.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="colorMethods.js.html">colorMethods.js</a><a href="colorMethods.js.html#source.113">, line 113</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="getCustomVisions">getCustomVisions<span class="signature">(&hellip;arguments)</span><span class="return-type-signature"> &rarr; {Object}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Creates a custom visions object with specified vision types. The user can then operate elements on this custom object containing user-defined transformations.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">arguments</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                    &lt;repeatable&gt;<br>
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Vision types to include in the custom visions object.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Object</code>
+            
+            
+                <ul>
+<li>Custom visions object containing specified vision types with default settings.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.275">, line 275</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="getVisionDetail">getVisionDetail<span class="signature">(vision, obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Object|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Retrieves detailed information about a specific color vision simulation.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">vision</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The name of the color vision simulation.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Object</code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>An object containing detailed information about the specified color vision simulation,
+or undefined if the vision name is not found.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.44">, line 44</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="getVisions">getVisions<span class="signature">(obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Array.&lt;string>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Retrieves the names of color vision simulations supported by the library or the custom vision object provided by the user.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;string></code>
+            
+            
+                <ul>
+<li>An array containing the names of the color vision simulations.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.31">, line 31</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="linearize">linearize<span class="signature">(color)</span><span class="return-type-signature"> &rarr; {Array.&lt;number>|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Linearizes an sRGB color array by applying a gamma correction formula.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">color</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>Array.&lt;number></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The CSS color string or an array containing the RGB components [red, green, blue, alpha].</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;number></code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>An array containing the linearized RGB components [red, green, blue, alpha],
+or undefined if the input is invalid.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="colorMethods.js.html">colorMethods.js</a><a href="colorMethods.js.html#source.79">, line 79</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="processPixels">processPixels<span class="signature">(target, visionType, obj<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {HTMLImageElement|null}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Processes each pixel of an image element to simulate color vision deficiency. (Currently not available to public)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">target</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>HTMLImageElement</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The image element to process.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">visionType</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>The type of color vision simulation to apply.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">obj</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        visions
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Optional parameter specifying the object containing color vision definitions.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>HTMLImageElement</code>
+            
+                <code>null</code>
+            
+            
+                <ul>
+<li>The processed image element with simulated color vision deficiency applied, or null if an error occurs.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visionMethods.js.html">visionMethods.js</a><a href="visionMethods.js.html#source.182">, line 182</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="rgbToString">rgbToString<span class="signature">(color)</span><span class="return-type-signature"> &rarr; {string}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Converts an array of RGB or RGBA values to a CSS color string.
+If invalid format is provided then the array is returned without any modifications.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">color</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Array.&lt;number></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>An array containing the RGB components [red, green, blue] or [red, green, blue, alpha].</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>string</code>
+            
+            
+                <ul>
+<li>The CSS color string in the format 'rgb(r, g, b)' or 'rgba(r, g, b, a)'.</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="colorMethods.js.html">colorMethods.js</a><a href="colorMethods.js.html#source.58">, line 58</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="stringToRgb">stringToRgb<span class="signature">(color)</span><span class="return-type-signature"> &rarr; {Array.&lt;number>|undefined}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Converts a CSS color string to an array of RGB values.
+Supports rgb(x,x,x) and rgba(x,x,x,x) formats. If rgb(x,x,x,x) is provided then input is percieved as rgba type.
+Similarly if rgba(x,x,x) is provided then input is percieved as rgb type.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">color</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The CSS color string to convert, e.g., 'rgb(255, 23, 45)'.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;number></code>
+            
+                <code>undefined</code>
+            
+            
+                <ul>
+<li>An array containing the RGB components [red, green, blue],
+or undefined if the input string is invalid, e.g., [255, 23, 45].</li>
+</ul>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="colorMethods.js.html">colorMethods.js</a><a href="colorMethods.js.html#source.31">, line 31</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="ColorVision">ColorVision</h4>
+
+
+
+
+<div class="description">
+    <p>Object containing definition for various color vision properties and its transformation.</p>
+<p>Each color vision is represented by an object containing a description, transformation matrix for color conversion, and additional properties.</p>
+</div>
+
+
+
+    <h4>Type</h4>
+    <ul>
+        <li>
+            
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h4 class="method-heading">Properties</h4>
+    
+
+<ul class="method-params">
+
+
+    <li>
+        
+            <span class="param-name">description</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+
+        
+
+        <div class="param-description">
+            <p>Description of the color vision type.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">transMatrix</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>Array.&lt;Array.&lt;number>></code>
+    </span>
+    
+
+        
+
+        
+
+        
+
+        <div class="param-description">
+            <p>Transformation matrix for color conversion (Used to convert original sRGB to vision based sRGB).</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">useMap</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>boolean</code>
+    </span>
+    
+
+        
+
+        
+
+        
+
+        <div class="param-description">
+            <p>Indicates if a color mapping function is used.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">mapColor</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>function</code>
+    </span>
+    
+
+        
+
+        
+
+        
+
+        <div class="param-description">
+            <p>Function to map colors based on the vision type. User can provide custom functions for color conversions.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="visions.js.html">visions.js</a><a href="visions.js.html#source.21">, line 21</a>
+        </li>
+    </ul>
+
+
+</article>
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+  </div>
+</main>
+
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Sat Jun 29 2024 15:30:10 GMT+0530 (India Standard Time)
+  </div>
+</footer>
+
+
+
+<script src="scripts/prism.dev.js"></script>
+</body>
+</html>

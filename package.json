@@ -1,0 +1,43 @@
+{
+  "name": "huefree",
+  "version": "1.0.0",
+  "description": "HueFree provides a suite of utility functions specifically designed to facilitate color manipulation and transformation, particularly with an emphasis on accommodating color blindness. It includes methods for converting color representations, applying color transformations, and simulating various types of color vision deficiencies. Key features include converting colors between different formats, linearizing and de-linearizing color values, applying color transformations, and simulating different types of color blindness.",
+  "main": "huefree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "docs": "jsdoc --readme README.md -c jsdoc.json --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyushk77/HueFree.git"
+  },
+  "keywords": [
+    "color",
+    "color-blind",
+    "color-vision",
+    "vision-transformation",
+    "conversion",
+    "tools",
+    "javaScript",
+    "library",
+    "accessibility",
+    "color-utilities",
+    "vision",
+    "simulation"
+  ],
+  "author": "Piyush Katyal",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/piyushk77/HueFree/issues"
+  },
+  "homepage": "https://github.com/piyushk77/HueFree#readme",
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "jsdoc": "^4.0.3",
+    "tidy-jsdoc": "^1.4.1"
+  }
+}
