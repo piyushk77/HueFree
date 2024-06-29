@@ -133,4 +133,10 @@ function colorTransform(transMat, rgbMat) {
     return transColor;
 }
 
-export { stringToRgb, rgbToString, linearize, deLinearize, colorTransform };
+module.exports = {
+    stringToRgb,
+    rgbToString,
+    linearize,
+    deLinearize,
+    colorTransform
+};

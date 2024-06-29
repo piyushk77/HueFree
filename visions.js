@@ -205,4 +205,4 @@ const visions = Object.freeze({
     })
 });
 
-export default visions;
+module.exports = visions;

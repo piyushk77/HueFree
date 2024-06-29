@@ -1,5 +1,5 @@
-import visions from "./visions.js";
-import * as color from "./colorMethods.js";
+const visions = require("./visions.js");
+const color = require("./colorMethods.js");
 
 /**
  * Retrieves the names of color vision simulations supported by the library or the custom vision object provided by the user.
@@ -8,7 +8,7 @@ import * as color from "./colorMethods.js";
  * @returns {string[]} - An array containing the names of the color vision simulations.
  */
 
-export function getVisions(obj = visions) {
+function getVisions(obj = visions) {
     return Object.keys(obj);
 }
 
@@ -21,7 +21,7 @@ export function getVisions(obj = visions) {
  *                               or undefined if the vision name is not found.
  */
 
-export function getVisionDetail(vision, obj = visions) {
+function getVisionDetail(vision, obj = visions) {
     return obj[vision];
 }
 
@@ -35,7 +35,7 @@ export function getVisionDetail(vision, obj = visions) {
  *                                           or undefined if the target cannot be processed.
  */
 
-export function changeVision(target, visionType, obj = visions) {
+function changeVision(target, visionType, obj = visions) {
     if (!obj[visionType])
         return;
     let rgbRegex = /rgba?\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)(?:\s*,\s*(-?\d+(?:\.\d+)?))?\s*\)/;
@@ -107,7 +107,7 @@ export function changeVision(target, visionType, obj = visions) {
  *                                           or undefined if the target cannot be processed.
  */
 
-export function changeVisionRecursive(target, visionType, obj = visions) {
+function changeVisionRecursive(target, visionType, obj = visions) {
     if (!obj[visionType])
         return;
     let rgbRegex = /rgba?\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)(?:\s*,\s*(-?\d+(?:\.\d+)?))?\s*\)/;
@@ -252,7 +252,7 @@ function applyFilter(target, visionType, obj = visions) {
  * @returns {Object} - Custom visions object containing specified vision types with default settings.
  */
 
-export function getCustomVisions() {
+function getCustomVisions() {
     let customVisions = {};
     for (let i = 0; i < arguments.length; ++i) {
         let customVision = {
@@ -281,3 +281,11 @@ export function getCustomVisions() {
     }
     return customVisions;
 }
+
+module.exports = {
+    getVisions,
+    getVisionDetail,
+    changeVision,
+    changeVisionRecursive,
+    getCustomVisions
+};
