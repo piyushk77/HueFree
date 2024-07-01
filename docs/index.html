@@ -53,34 +53,485 @@
 
     <section class="readme">
         <article><h1 align="center" id="title">HueFree</h1>
-<p align="center"><img src="https://socialify.git.ci/Piyush-Katyal/commerce/image?description=1&amp;descriptionEditable=JavaScript%20library%20for%20enhancing%20color%20accessibility%20and%20visibility%20for%20users%20with%20color%20blindness.&amp;font=Inter&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Plus&amp;theme=Dark" alt="project-image"></p>
-<p id="description">HueFree is a comprehensive JavaScript library designed to assist developers in creating accessible color methods for users with color blindness. It provides a set of functions that enable manipulation and transformation of colors and DOM elements to enhance visibility and usability for color blind individuals. The library includes modules for handling color conversion linearization and vision simulation making it a valuable tool for creating inclusive web applications and visual content.</p>
-<h2>🧐 Features</h2>
-<p>Here're some of the project's best features:</p>
-<h2>🛠️ Installation Steps:</h2>
-<p>1. Using npm (Node.js Environment) If you're using Node.js for your project: Install HueFree via npm:</p>
-<pre class="prettyprint source"><code>npm install @your-username/huefree
-</code></pre>
-<p>2. Import HueFree into your project:</p>
-<pre class="prettyprint source"><code>// ES6 import syntax import {     stringToRgb     rgbToString     linearize     deLinearize     colorTransform     getVisions     getVisionDetail     changeVision     changeVisionRecursive     getCustomVisions } from '@your-username/huefree';
-</code></pre>
-<p>3. Using a Script Tag (Browser Environment). If you're working with plain HTML CSS and JavaScript: Download the latest version of my-library.js from the repository. Include my-library.js in your HTML file:</p>
-<pre class="prettyprint source"><code>
-</code></pre>
-<p>4. Access the library functions via the global myLibrary object:</p>
-<pre class="prettyprint source"><code>const {     stringToRgb     rgbToString     linearize     deLinearize     colorTransform     getVisions     getVisionDetail     changeVision     changeVisionRecursive     getCustomVisions } = myLibrary;
-</code></pre>
-<h2>🍰 Contribution Guidelines:</h2>
-<p>Contribution Guidelines Thank you for considering contributing to HueFree! We welcome contributions from the community to help improve and expand the library. Please follow these guidelines to ensure a smooth and effective contribution process. How to Contribute Fork the Repository Fork the repository to your own GitHub account by clicking the &quot;Fork&quot; button on the top right of the repository page. Clone Your Fork Clone your forked repository to your local machine using: bash Copy code git clone https://github.com/your-username/huefree.git Create a Branch Create a new branch for your contribution: bash Copy code git checkout -b feature/your-feature-name Make Your Changes Make your changes to the codebase. Ensure your code follows the project's coding standards and conventions. Commit Your Changes Commit your changes with a descriptive commit message: bash Copy code git add . git commit -m &quot;Add feature: description of your feature&quot; Push Your Changes Push your changes to your forked repository: bash Copy code git push origin feature/your-feature-name Create a Pull Request Navigate to the original repository and click the &quot;New Pull Request&quot; button. Select your branch and submit your pull request with a detailed description of your changes. Code Style Follow the existing code style and formatting. Use meaningful variable and function names. Include comments and documentation where necessary. Reporting Issues If you find any bugs or have suggestions for improvements please open an issue on the GitHub repository. Provide detailed information about the issue or suggestion to help us understand and address it effectively. Testing Ensure your changes do not break existing functionality by running the existing tests. If you add new features include appropriate tests. Documentation Update the documentation if your changes affect the existing documentation or if you add new features. Ensure that the documentation is clear and concise.</p>
-<h2>💻 Built with</h2>
-<p>Technologies used in the project:</p>
+<p align="center"><img src="./resources/images/HueFree.png" alt="project-image"></p>
+<h2>Description</h2>
+<p><strong>HueFree</strong> is a JavaScript library designed to assist developers in creating accessible web applications for color-blind individuals. The library offers a range of color manipulation methods to simulate different types of color blindness and provide color transformations that enhance accessibility.</p>
+<h3>Key Features:</h3>
 <ul>
-<li>JavaScript: The primary programming language used for developing the library.</li>
-<li>Node.js: The runtime environment for executing JavaScript code server-side.</li>
-<li>NPM: Node Package Manager used for managing project dependencies.</li>
+<li><strong>Simulate Color Blindness</strong>: Accurately simulate various types of color blindness (e.g., protanopia, deuteranopia, tritanopia).</li>
+<li><strong>Color Transformations</strong>: Transform colors based on transformation matrices and color mappings.</li>
+<li><strong>Custom Visions</strong>: Create customized vision object with custom color transformation functions.</li>
+<li><strong>Easy Integration</strong>: Seamlessly integrate into any JavaScript project with minimal setup.</li>
 </ul>
-<h2>🛡️ License:</h2>
-<p>This project is licensed under the GNU General Public License v3.0</p></article>
+<p>HueFree empowers developers to create a more inclusive web experience by addressing the needs of color-blind users, ensuring that color is not a barrier to accessing information.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#api-documentation">API Documentation</a></li>
+<li><a href="#api-usage">API Usage</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2>References</h2>
+<p>This project is based on research from the following sources:</p>
+<h3>Research Papers</h3>
+<ol>
+<li><strong>&quot;Digital video colourmaps for checking the legibility of displays by dichromats&quot;</strong> by Viénot, Brettel, and Mollon (1999).</li>
+<li><strong>&quot;A Physiologically-based Model for Simulation of Color Vision Deficiency&quot;</strong> by Machado et al. (2009).</li>
+</ol>
+<h3>Websites</h3>
+<ol>
+<li><a href="https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html">CVD Simulation by Machado et al.</a></li>
+<li><a href="https://ixora.io/projects/colorblindness/color-blindness-simulation-research/">Color Blindness Simulation Research by Ixora.io</a></li>
+<li><a href="https://mk.bcgsc.ca/colorblind/math.mhtml">Color Blindness Simulation by mk.bcgsc.ca</a></li>
+</ol>
+<h2>Installation</h2>
+<p>To install HueFree, follow these steps:</p>
+<h3>Browser-based Environment</h3>
+<p>If you prefer to include HueFree directly in your HTML file using a CDN, add the following script tag to your HTML:</p>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/huefree@1.0.3/dist/huefree.min.js&quot;>&lt;/script>
+</code></pre>
+<p>After adding the script tag, you can start using HueFree in your project. For example:</p>
+<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
+&lt;html lang=&quot;en&quot;>
+&lt;head>
+    &lt;meta charset=&quot;UTF-8&quot;>
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    &lt;title>HueFree Example&lt;/title>
+&lt;/head>
+&lt;body>
+
+    &lt;!-- Adding the HueFree library via CDN -->
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/huefree@1.0.3/dist/huefree.min.js&quot;>&lt;/script>
+
+    &lt;!-- Usage of HueFree APIs -->
+    &lt;script>
+        // Example of getting list of supported visions
+        const { getVisions } = huefree;
+        const visionList = getVisions();
+        console.log(visionList);
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+<h3>Node.js-based Environment</h3>
+<p>To install HueFree via npm, run the following command in your project directory:</p>
+<pre class="prettyprint source lang-sh"><code>npm install huefree
+</code></pre>
+<p>After installation, you can start using HueFree in your Node.js project. For example:</p>
+<pre class="prettyprint source lang-js"><code>const huefree = require('huefree');
+
+// Example of color transformation
+const transformedColor = huefree.changeVision('rgba(255,23,234,23)', 'protanopia');
+console.log(transformedColor);
+</code></pre>
+<h2>Examples</h2>
+<h3>Normal Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/normal_1.png" alt="normal vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/normal_2.png" alt="normal vision output 2" width="400"/>
+</p>
+<h3>Protanopia Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/protanopia_1.png" alt="protanopia vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/protanopia_2.png" alt="protanopia vision output 2" width="400"/>
+</p>
+<h3>Deuteranopia Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/deuteranopia_1.png" alt="deuteranopia vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/deuteranopia_2.png" alt="deuteranopia vision output 2" width="400"/>
+</p>
+<h3>Tritanopia Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/tritanopia_1.png" alt="tritanopia vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/tritanopia_2.png" alt="tritanopia vision output 2" width="400"/>
+</p>
+<h3>Protanomaly Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/protanomaly_1.png" alt="protanomaly vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/protanomaly_2.png" alt="protanomaly vision output 2" width="400"/>
+</p>
+<h3>Deuteranomaly Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/deuteranomaly_1.png" alt="deuteranomaly vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/deuteranomaly_2.png" alt="deuteranomaly vision output 2" width="400"/>
+</p>
+<h3>Tritanomaly Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/tritanomaly_1.png" alt="tritanomaly vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/tritanomaly_2.png" alt="tritanomaly vision output 2" width="400"/>
+</p>
+<h3>Achromatopsia Vision:</h3>
+<p>
+  <img src="./resources/images/color_visions/achromatopsia_1.png" alt="achromatopsia vision output 1" width="300"/>
+  <img src="./resources/images/color_visions/achromatopsia_2.png" alt="achromatopsia vision output 2" width="400"/>
+</p>
+<h2>API Documentation</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getVisions</code></td>
+<td><code>vision object</code> (Object)</td>
+<td>Returns an array containing the list of supported color visions.</td>
+</tr>
+<tr>
+<td><code>getVisionDetail</code></td>
+<td><code>vision</code> (String), <code>vision object</code> (Object)</td>
+<td>Returns an object containing complete details of the specified vision.</td>
+</tr>
+<tr>
+<td><code>changeVision</code></td>
+<td><code>target</code> (String or DOM Element), <code>visionType</code> (String), <code>vision object</code> (Object)</td>
+<td>Modifies and returns the target element (DOM or Color String) with color properties specific to the provided color vision type.</td>
+</tr>
+<tr>
+<td><code>changeVisionRecursive</code></td>
+<td><code>target</code> (String or DOM Element), <code>visionType</code> (String), <code>vision object</code> (Object)</td>
+<td>Modifies the target element and its sub children iteratively and returns back the new target element.</td>
+</tr>
+<tr>
+<td><code>getCustomVisions</code></td>
+<td><code>vision list</code> (String)</td>
+<td>Returns an object containing huefree format of vision object with custom vision types provided as parameters.</td>
+</tr>
+<tr>
+<td><code>stringToRgb</code></td>
+<td><code>color</code> (String)</td>
+<td>Takes an RGB or an RGBA format color string and returns the extracted color values as a numeric array.</td>
+</tr>
+<tr>
+<td><code>rgbToString</code></td>
+<td><code>color</code> (Array number[])</td>
+<td>Takes a numeric array and based on number of values returns an RGB of an RGBA color string.</td>
+</tr>
+<tr>
+<td><code>linearize</code></td>
+<td><code>color</code> (String or Array number[])</td>
+<td>Converts the provided standard RGB color string or array into linearized color space RGB string.</td>
+</tr>
+<tr>
+<td><code>deLinearize</code></td>
+<td><code>color</code> (String or Array number[])</td>
+<td>Converts the provided linear RGB color string or array into standard RGB color string.</td>
+</tr>
+<tr>
+<td><code>colorTransform</code></td>
+<td><code>transMat</code> (Array number[][]), <code>rgbMat</code> (Array number[])</td>
+<td>Converts the given RGB matrix value by multiplying with the given transformation matrix.</td>
+</tr>
+</tbody>
+</table>
+<h2>API Usage</h2>
+<h3><code>getVisions(obj (Optional))</code></h3>
+<p>Get the list of all visions supported in the given vision object. By default it will return the list of in-built visions supported by HueFree.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>obj</code> (Object): Vision object to be searched through.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Array[Strings]): Array of visions as strings.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>const visionList = huefree.getVisions();
+console.log(visionList);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/getVisions.png" alt="getVisions Output"></p>
+<h3><code>getVisionDetail(vision, obj (Optional))</code></h3>
+<p>Get the complete object definition of the given vision type including its description, transformation matrix, usemap and mapColor. Custom object can be provided as second parameter to be searched through.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vision</code> (String): Type of vision to get details.</li>
+<li><code>obj</code> (Object): Custom object to be searched for. By default it uses the in-built vision object.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Object): Vision object containing specific definitions to the provided vision type.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>const visionDetails = huefree.getVisionDetail(&quot;deuteranopia&quot;);
+console.log(visionDetails);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/getVisionDetail.png" alt="getVisionDetail Output"></p>
+<h3><code>changeVision(target, visionType, obj (Optional))</code></h3>
+<p>Modifies the given target (Color string or DOM Element) and changes all the color based properties of this element. The child nodes are not affected.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>target</code> (String or DOM Element): Color string or DOM Element to be modified.</li>
+<li><code>visionType</code> (String): Type of vision to perform color transformation.</li>
+<li><code>obj</code> (Object): Custom object to be searched for. By default it uses the in-built vision object.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Object): Modified string or DOM element.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let elementId = document.getElementById(&quot;i02&quot;);
+let visionType = &quot;deuteranopia&quot;;
+huefree.changeVision(elementId, visionType);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/changeVision.png" alt="changeVision Output"></p>
+<h3><code>changeVisionRecursive(target, visionType, obj (Optional))</code></h3>
+<p>Modifies the given target (Color string or DOM Element) and changes all the color based properties of this element and iteratively changes the properties of all the child nodes of the DOM element.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>target</code> (String or DOM Element): Color string or DOM Element to be modified.</li>
+<li><code>visionType</code> (String): Type of vision to perform color transformation.</li>
+<li><code>obj</code> (Object): Custom object to be searched for. By default it uses the in-built vision object.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Object): Modified string or DOM element.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let element = document.documentElement;   // Changes the whole document
+let visionType = &quot;deuteranopia&quot;;
+huefree.changeVisionRecursive(element, visionType);
+</code></pre>
+<h4>Output</h4>
+<h5>Before</h5>
+<p><img src="./resources/images/method_outputs/changeVisionRecursive1.png" alt="changeVisionRecursive Output"></p>
+<h5>After</h5>
+<p><img src="./resources/images/method_outputs/changeVisionRecursive2.png" alt="changeVisionRecursive Output"></p>
+<h3><code>getCustomVisions(vision1, vision2, vision3 ...)</code></h3>
+<p>Creates a custom vision object based on the given vision type names and returns the complete object for further customizations.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>list of vision names</code> (String): Custom vision type names.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Object): Object containing huefree format of vision object.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let myVisions = ['myVision_1', 'myVision_2', 'myVision_3'];
+let customObject = huefree.getCustomVisions(...myVisions);
+console.log(customObject);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/getCustomVisions.png" alt="getCustomVisions Output"></p>
+<h3><code>stringToRgb(color)</code></h3>
+<p>Converts a CSS color string of type RGB or RGBA to an array of numeric values. Supports rgb(x,x,x) and rgba(x,x,x,x) formats. If rgb(x,x,x,x) is provided then input is percieved as rgba type. Similarly if rgba(x,x,x) is provided then input is percieved as rgb type.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>color</code> (String): CSS color in RGB or RGBA format.</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(Array number[]): Array containing the RGB components [red, green, blue], or undefined if the input string is invalid, e.g., [255, 23, 45].</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let color = &quot;rgba(23,111,68)&quot;;
+let rgb = huefree.stringToRgb(color);
+console.log(rgb);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/stringToRgb.png" alt="stringToRgb Output"></p>
+<h3><code>rgbToString(color)</code></h3>
+<p>Converts an array of RGB or RGBA values to a CSS color string. If invalid format is provided then the array is returned without any modifications.</p>
+<ul>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>color</code> (Array number[]): Array containing the RGB components [red, green, blue] or [red, green, blue, alpha].</li>
+</ul>
+</li>
+<li>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(String): The CSS color string in the format 'rgb(r, g, b)' or 'rgba(r, g, b, a)'.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let rgb = [23,45,233,50];
+let rgbString = huefree.rgbToString(rgb);
+console.log(rgbString);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/rgbToString.png" alt="rgbToString Output"></p>
+<h3><code>linearize(color)</code></h3>
+<p>Linearizes an sRGB color array by applying a gamma correction formula.</p>
+<ul>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>color</code> (String or Array number[]): The CSS color string or an array containing the RGB components [red, green, blue, alpha].</li>
+</ul>
+</li>
+<li><strong>Returns:</strong>
+<ul>
+<li>(Array number[]): Array containing the linearized RGB components [red, green, blue, alpha], or undefined if the input is invalid.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let color = &quot;rgba(23,111,68,23)&quot;;
+let rgbLinear = huefree.linearize(color);
+console.log(rgbLinear);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/linearize.png" alt="linearize Output"></p>
+<h3><code>deLinearize(color)</code></h3>
+<p>De-linearizes an RGB color array from linear to gamma-corrected sRGB values.</p>
+<ul>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>color</code> (String or Array number[]): The CSS color string or an array containing the linearized RGB components [red, green, blue, alpha].</li>
+</ul>
+</li>
+<li><strong>Returns:</strong>
+<ul>
+<li>(Array number[]): Array containing the de-linearized sRGB components [red, green, blue, alpha], or undefined if the input is invalid.</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let rgbLinear = [ 0.008568125618069307, 0.1589608350608804, 0.05780543019106723, 23 ];
+let sRGB = huefree.deLinearize(rgbLinear);
+console.log(sRGB);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/deLinearize.png" alt="deLinearize Output"></p>
+<h3><code>colorTransform(transMat, rgbMat)</code></h3>
+<p>Applies a color transformation matrix to an RGB color array.</p>
+<ul>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>transMat</code> (Array number[][]): The transformation matrix, a 3x3 array of numbers.</li>
+<li><code>rgbMat</code> (Array number[]): An array containing the transformed RGB components.</li>
+</ul>
+</li>
+<li><strong>Returns:</strong>
+<ul>
+<li>(Array number[]): An array containing the RGB components [red, green, blue, alpha].</li>
+</ul>
+</li>
+</ul>
+<h4>Example</h4>
+<pre class="prettyprint source lang-javascript"><code>let transform = [
+    [0.2, 1, 0.3],
+    [0, 1, 1],
+    [1.2, -1.1, -0.3]
+];
+let rgb = [233, 123, 19];
+let transRgb = huefree.colorTransform(transform, rgb);
+console.log(transRgb);
+</code></pre>
+<h4>Output</h4>
+<p><img src="./resources/images/method_outputs/colorTransform.png" alt="colorTransform Output"></p>
+<h2>Contributing</h2>
+<p>We welcome contributions to HueFree! If you'd like to contribute, please follow these steps:</p>
+<h3>How to Contribute</h3>
+<ol>
+<li>
+<p><strong>Fork the Repository:</strong></p>
+<ul>
+<li>Fork the <a href="https://github.com/piyushk77/HueFree">HueFree repository</a> on GitHub.</li>
+</ul>
+</li>
+<li>
+<p><strong>Clone the Fork:</strong></p>
+<ul>
+<li>Clone your forked repository to your local machine.</li>
+</ul>
+<pre class="prettyprint source lang-sh"><code>    git clone https://github.com/your-username/huefree.git
+</code></pre>
+<pre class="prettyprint source lang-sh"><code>    cd huefree
+</code></pre>
+</li>
+<li>
+<p><strong>Create a Branch:</strong></p>
+<ul>
+<li>Create a new branch for your feature or bug fix.</li>
+</ul>
+<pre class="prettyprint source lang-sh"><code>    git checkout -b your-branch-name
+</code></pre>
+</li>
+<li>
+<p><strong>Make Your Changes:</strong></p>
+<ul>
+<li>Implement your feature or bug fix in your new branch.</li>
+</ul>
+<pre class="prettyprint source lang-sh"><code>    git add .
+    git commit -m &quot;Description of your changes&quot;
+</code></pre>
+</li>
+<li>
+<p><strong>Commit Your Changes:</strong></p>
+<ul>
+<li>Commit your changes with a descriptive commit message.</li>
+</ul>
+<pre class="prettyprint source lang-sh"><code>    git clone https://github.com/your-username/huefree.git
+</code></pre>
+</li>
+<li>
+<p><strong>Push to Your Fork:</strong></p>
+<ul>
+<li>Push your changes to your forked repository.</li>
+</ul>
+<pre class="prettyprint source lang-sh"><code>    git push origin your-branch-name
+</code></pre>
+</li>
+<li>
+<p><strong>Create a Pull Request:</strong></p>
+<ul>
+<li>Open a pull request from your branch to the main branch of the original repository.</li>
+<li>Provide a clear and descriptive title for your pull request.</li>
+<li>Include a detailed description of your changes and any related issue numbers.</li>
+</ul>
+</li>
+</ol>
+<h2>License</h2>
+<p>This project is licensed under the <a href="./LICENSE">GNU General Public License Version 3</a>. See the LICENSE file for more details.</p></article>
     </section>
 
 
@@ -93,7 +544,7 @@
 
 <footer class="layout-footer">
   <div class="container">
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Sat Jun 29 2024 15:30:10 GMT+0530 (India Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Mon Jul 01 2024 19:35:13 GMT+0530 (India Standard Time)
   </div>
 </footer>
 
