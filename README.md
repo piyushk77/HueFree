@@ -1,6 +1,6 @@
 <h1 align="center" id="title">HueFree</h1>
 
-<p align="center"><img src="./resources/images/HueFree.png" alt="project-image"></p>
+<p align="center"><img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/HueFree.png?raw=true" alt="project-image"></p>
 
 ## Description
 
@@ -94,50 +94,50 @@ console.log(transformedColor);
 ## Examples
 ### Normal Vision:
 <p>
-  <img src="./resources/images/color_visions/normal_1.png" alt="normal vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/normal_2.png" alt="normal vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/normal_1.png?raw=true" alt="normal vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/normal_2.png?raw=true" alt="normal vision output 2" width="400"/>
 </p>
 
 ### Protanopia Vision:
 <p>
-  <img src="./resources/images/color_visions/protanopia_1.png" alt="protanopia vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/protanopia_2.png" alt="protanopia vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/protanopia_1.png?raw=true" alt="protanopia vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/protanopia_2.png?raw=true" alt="protanopia vision output 2" width="400"/>
 </p>
 
 ### Deuteranopia Vision:
 <p>
-  <img src="./resources/images/color_visions/deuteranopia_1.png" alt="deuteranopia vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/deuteranopia_2.png" alt="deuteranopia vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/deuteranopia_1.png?raw=true" alt="deuteranopia vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/deuteranopia_2.png?raw=true" alt="deuteranopia vision output 2" width="400"/>
 </p>
 
 ### Tritanopia Vision:
 <p>
-  <img src="./resources/images/color_visions/tritanopia_1.png" alt="tritanopia vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/tritanopia_2.png" alt="tritanopia vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/tritanopia_1.png?raw=true" alt="tritanopia vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/tritanopia_2.png?raw=true" alt="tritanopia vision output 2" width="400"/>
 </p>
 
 ### Protanomaly Vision:
 <p>
-  <img src="./resources/images/color_visions/protanomaly_1.png" alt="protanomaly vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/protanomaly_2.png" alt="protanomaly vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/protanomaly_1.png?raw=true" alt="protanomaly vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/protanomaly_2.png?raw=true" alt="protanomaly vision output 2" width="400"/>
 </p>
 
 ### Deuteranomaly Vision:
 <p>
-  <img src="./resources/images/color_visions/deuteranomaly_1.png" alt="deuteranomaly vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/deuteranomaly_2.png" alt="deuteranomaly vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/deuteranomaly_1.png?raw=true" alt="deuteranomaly vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/deuteranomaly_2.png?raw=true" alt="deuteranomaly vision output 2" width="400"/>
 </p>
 
 ### Tritanomaly Vision:
 <p>
-  <img src="./resources/images/color_visions/tritanomaly_1.png" alt="tritanomaly vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/tritanomaly_2.png" alt="tritanomaly vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/tritanomaly_1.png?raw=true" alt="tritanomaly vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/tritanomaly_2.png?raw=true" alt="tritanomaly vision output 2" width="400"/>
 </p>
 
 ### Achromatopsia Vision:
 <p>
-  <img src="./resources/images/color_visions/achromatopsia_1.png" alt="achromatopsia vision output 1" width="300"/>
-  <img src="./resources/images/color_visions/achromatopsia_2.png" alt="achromatopsia vision output 2" width="400"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/achromatopsia_1.png?raw=true" alt="achromatopsia vision output 1" width="300"/>
+  <img src="https://github.com/piyushk77/HueFree/blob/main/resources/images/color_visions/achromatopsia_2.png?raw=true" alt="achromatopsia vision output 2" width="400"/>
 </p>
 
 ## API Documentation
@@ -176,8 +176,8 @@ console.log(visionList);
 ```
 
 #### Output
-
-![getVisions Output](./resources/images/method_outputs/getVisions.png)
+https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/getVisions.png?raw=true
+![getVisions Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/getVisions.png?raw=true)
 
 
 ### `getVisionDetail(vision, obj (Optional))`
@@ -200,7 +200,7 @@ console.log(visionDetails);
 
 #### Output
 
-![getVisionDetail Output](./resources/images/method_outputs/getVisionDetail.png)
+![getVisionDetail Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/getVisionDetail.png?raw=true)
 
 ### `changeVision(target, visionType, obj (Optional))`
 
@@ -224,7 +224,7 @@ huefree.changeVision(elementId, visionType);
 
 #### Output
 
-![changeVision Output](./resources/images/method_outputs/changeVision.png)
+![changeVision Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/changeVision.png?raw=true)
 
 ### `changeVisionRecursive(target, visionType, obj (Optional))`
 
@@ -248,9 +248,9 @@ huefree.changeVisionRecursive(element, visionType);
 
 #### Output
 ##### Before
-![changeVisionRecursive Output](./resources/images/method_outputs/changeVisionRecursive1.png)
+![changeVisionRecursive Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/changeVisionRecursive1.png?raw=true)
 ##### After
-![changeVisionRecursive Output](./resources/images/method_outputs/changeVisionRecursive2.png)
+![changeVisionRecursive Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/changeVisionRecursive2.png?raw=true)
 
 ### `getCustomVisions(vision1, vision2, vision3 ...)`
 
@@ -272,7 +272,7 @@ console.log(customObject);
 
 #### Output
 
-![getCustomVisions Output](./resources/images/method_outputs/getCustomVisions.png)
+![getCustomVisions Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/getCustomVisions.png?raw=true)
 
 ### `stringToRgb(color)`
 
@@ -294,7 +294,7 @@ console.log(rgb);
 
 #### Output
 
-![stringToRgb Output](./resources/images/method_outputs/stringToRgb.png)
+![stringToRgb Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/stringToRgb.png?raw=true)
 
 ### `rgbToString(color)`
 
@@ -316,7 +316,7 @@ console.log(rgbString);
 
 #### Output
 
-![rgbToString Output](./resources/images/method_outputs/rgbToString.png)
+![rgbToString Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/rgbToString.png?raw=true)
 
 ### `linearize(color)`
 
@@ -337,7 +337,7 @@ console.log(rgbLinear);
 
 #### Output
 
-![linearize Output](./resources/images/method_outputs/linearize.png)
+![linearize Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/linearize.png?raw=true)
 
 ### `deLinearize(color)`
 
@@ -358,7 +358,7 @@ console.log(sRGB);
 
 #### Output
 
-![deLinearize Output](./resources/images/method_outputs/deLinearize.png)
+![deLinearize Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/deLinearize.png?raw=true)
 
 ### `colorTransform(transMat, rgbMat)`
 
@@ -385,7 +385,7 @@ console.log(transRgb);
 
 #### Output
 
-![colorTransform Output](./resources/images/method_outputs/colorTransform.png)
+![colorTransform Output](https://github.com/piyushk77/HueFree/blob/main/resources/images/method_outputs/colorTransform.png?raw=true)
 
 ## Contributing
 
@@ -442,4 +442,4 @@ We welcome contributions to HueFree! If you'd like to contribute, please follow 
 
 ## License
 
-This project is licensed under the [GNU General Public License Version 3](./LICENSE). See the LICENSE file for more details.
+This project is licensed under the [GNU General Public License Version 3](https://github.com/piyushk77/HueFree/blob/main/LICENSE). See the LICENSE file for more details.
