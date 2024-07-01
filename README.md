@@ -47,7 +47,7 @@ To install HueFree, follow these steps:
 
 If you prefer to include HueFree directly in your HTML file using a CDN, add the following script tag to your HTML:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/huefree@1.0.2/dist/huefree.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/huefree@1.0.3/dist/huefree.min.js"></script>
 ```
 After adding the script tag, you can start using HueFree in your project. For example:
 
@@ -62,7 +62,7 @@ After adding the script tag, you can start using HueFree in your project. For ex
 <body>
 
     <!-- Adding the HueFree library via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/huefree@1.0.2/dist/huefree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/huefree@1.0.3/dist/huefree.min.js"></script>
 
     <!-- Usage of HueFree APIs -->
     <script>
